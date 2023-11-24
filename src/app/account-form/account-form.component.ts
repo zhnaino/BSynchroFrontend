@@ -14,6 +14,7 @@ export class AccountFormComponent {
   constructor(private accountService: AccountService) {}
 
   openAccount() {
+    this.messageResponse = undefined; 
     this.accountService.openAccount(this.userId, this.initialDeposit).subscribe(
       (response) => {
         console.log(response);
